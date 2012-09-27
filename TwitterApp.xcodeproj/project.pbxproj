@@ -18,6 +18,7 @@
 		B23A4F62161456BE00B00B9E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B23A4F61161456BE00B00B9E /* Default-568h@2x.png */; };
 		B23A4F65161456BE00B00B9E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23A4F63161456BE00B00B9E /* MainStoryboard.storyboard */; };
 		B23A4F68161456BE00B00B9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B23A4F67161456BE00B00B9E /* ViewController.m */; };
+		B23A4F70161457D400B00B9E /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B23A4F6F161457D400B00B9E /* TimelineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		B23A4F64161456BE00B00B9E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B23A4F66161456BE00B00B9E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B23A4F67161456BE00B00B9E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B23A4F6E161457D400B00B9E /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
+		B23A4F6F161457D400B00B9E /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				B23A4F66161456BE00B00B9E /* ViewController.h */,
 				B23A4F67161456BE00B00B9E /* ViewController.m */,
 				B23A4F52161456BE00B00B9E /* Supporting Files */,
+				B23A4F6E161457D400B00B9E /* TimelineViewController.h */,
+				B23A4F6F161457D400B00B9E /* TimelineViewController.m */,
 			);
 			path = TwitterApp;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				B23A4F58161456BE00B00B9E /* main.m in Sources */,
 				B23A4F5C161456BE00B00B9E /* AppDelegate.m in Sources */,
 				B23A4F68161456BE00B00B9E /* ViewController.m in Sources */,
+				B23A4F70161457D400B00B9E /* TimelineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
