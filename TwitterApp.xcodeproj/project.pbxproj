@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADFE6D821615DEC5004F8619 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFE6D811615DEC5004F8619 /* Social.framework */; };
 		B23A4F4C161456BE00B00B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23A4F4B161456BE00B00B9E /* UIKit.framework */; };
 		B23A4F4E161456BE00B00B9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23A4F4D161456BE00B00B9E /* Foundation.framework */; };
 		B23A4F50161456BE00B00B9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23A4F4F161456BE00B00B9E /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ADFE6D811615DEC5004F8619 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B23A4F47161456BE00B00B9E /* TwitterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23A4F4B161456BE00B00B9E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B23A4F4D161456BE00B00B9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFE6D821615DEC5004F8619 /* Social.framework in Frameworks */,
 				B25CA2B816151FB9003BBA64 /* Twitter.framework in Frameworks */,
 				B23A4F4C161456BE00B00B9E /* UIKit.framework in Frameworks */,
 				B23A4F4E161456BE00B00B9E /* Foundation.framework in Frameworks */,
@@ -62,6 +65,7 @@
 		B23A4F3C161456BE00B00B9E = {
 			isa = PBXGroup;
 			children = (
+				ADFE6D811615DEC5004F8619 /* Social.framework */,
 				B25CA2B716151FB9003BBA64 /* Twitter.framework */,
 				B23A4F51161456BE00B00B9E /* TwitterApp */,
 				B23A4F4A161456BE00B00B9E /* Frameworks */,

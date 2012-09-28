@@ -8,6 +8,7 @@
 
 #import "TimelineViewController.h"
 #import <Twitter/Twitter.h>
+#import <Social/Social.h>
 
 @interface TimelineViewController ()
 
@@ -45,14 +46,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
 }
@@ -131,6 +130,7 @@
 */
 
 - (IBAction)pressComposeButton:(id)sender {
+    /*
     // ツイートできるかどうかをチェックする
     if ([TWTweetComposeViewController canSendTweet]) {
         // TWTweetComposeViewControllerオブジェクトを作成する
@@ -138,5 +138,9 @@
         // TWTweetComposeViewControllerオブジェクトを表示する
         [self presentModalViewController:composeViewController animated:YES];
     }
+    */
+    
+    SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 @end
