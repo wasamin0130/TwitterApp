@@ -135,9 +135,8 @@
     if ([TWTweetComposeViewController canSendTweet]) {
         // TWTweetComposeViewControllerオブジェクトを作成する
         TWTweetComposeViewController *composeViewController = [[TWTweetComposeViewController alloc] init];
-        
+        // TWTweetComposeViewControllerオブジェクトを表示する
         [self presentModalViewController:composeViewController animated:YES];
-
     }
 }
 @end
