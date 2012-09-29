@@ -21,6 +21,7 @@
 		B23A4F68161456BE00B00B9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B23A4F67161456BE00B00B9E /* ViewController.m */; };
 		B23A4F70161457D400B00B9E /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B23A4F6F161457D400B00B9E /* TimelineViewController.m */; };
 		B25CA2B816151FB9003BBA64 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25CA2B716151FB9003BBA64 /* Twitter.framework */; };
+		B2DF767616166DB9005B1DA4 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2DF767516166DB9005B1DA4 /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B23A4F6E161457D400B00B9E /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
 		B23A4F6F161457D400B00B9E /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
 		B25CA2B716151FB9003BBA64 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		B2DF767516166DB9005B1DA4 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DF767616166DB9005B1DA4 /* Accounts.framework in Frameworks */,
 				ADFE6D821615DEC5004F8619 /* Social.framework in Frameworks */,
 				B25CA2B816151FB9003BBA64 /* Twitter.framework in Frameworks */,
 				B23A4F4C161456BE00B00B9E /* UIKit.framework in Frameworks */,
@@ -65,6 +68,7 @@
 		B23A4F3C161456BE00B00B9E = {
 			isa = PBXGroup;
 			children = (
+				B2DF767516166DB9005B1DA4 /* Accounts.framework */,
 				ADFE6D811615DEC5004F8619 /* Social.framework */,
 				B25CA2B716151FB9003BBA64 /* Twitter.framework */,
 				B23A4F51161456BE00B00B9E /* TwitterApp */,

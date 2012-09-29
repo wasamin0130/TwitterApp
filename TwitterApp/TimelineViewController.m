@@ -9,6 +9,7 @@
 #import "TimelineViewController.h"
 #import <Twitter/Twitter.h>
 #import <Social/Social.h>
+#import <Accounts/Accounts.h>
 
 @interface TimelineViewController ()
 
@@ -28,6 +29,48 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+    ACAccountType *twitterAccountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    [accountStore requestAccessToAccountsWithType:twitterAccountType withCompletionHandler:^(BOOL granted, NSError *error)
+     {
+         if (!granted) {
+             NSLog(@"ユーザーががアクセスを拒否しました。");
+         } else {
+             NSLog(@"ユーザーがアクセスを許可しました。");
+             NSArray *twitterAccounts = [accountStore accountsWithAccountType:twitterAccountType];
+             NSLog(@"twitterAccounts = %@", twitterAccounts);
+             if ([twitterAccounts count] > 0) {
+                 ACAccount *account = [twitterAccounts objectAtIndex:0];
+                 NSLog(@"account = %@", account);
+                 
+                 NSURL *url = [NSURL URLWithString:@"http://api.twitter.com/1/statuses/home_timeline.json"];
+                 TWRequest *request = [[TWRequest alloc] initWithURL:url
+                                                          parameters:nil
+                                                       requestMethod:TWRequestMethodGET];
+                 
+                 [request setAccount:account];
+                 [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error)
+                  {
+                      if (!responseData) {
+                          NSLog(@"%@", error);
+                      } else {
+                          NSLog(@"responseDat = %@", responseData);
+                          
+                          NSError *error;
+                          NSArray *statuses = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                              options:NSJSONReadingMutableLeaves
+                                                                                error:&error];
+                          if (statuses) {
+                              NSLog(@"%@", statuses);
+                          } else {
+                              NSLog(@"%@", error);
+                          }
+                      }
+                  }];
+             }
+         }
+     }];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
