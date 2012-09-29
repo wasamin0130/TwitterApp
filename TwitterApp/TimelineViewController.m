@@ -58,11 +58,14 @@
                           NSLog(@"responseDat = %@", responseData);
                           
                           NSError *error;
-                          NSArray *statuses = [NSJSONSerialization JSONObjectWithData:responseData
+                          statuses = [NSJSONSerialization JSONObjectWithData:responseData
                                                                               options:NSJSONReadingMutableLeaves
                                                                                 error:&error];
                           if (statuses) {
                               NSLog(@"%@", statuses);
+                              dispatch_async(dispatch_get_main_queue(), ^{
+                                  [self.tableView reloadData];
+                              });
                           } else {
                               NSLog(@"%@", error);
                           }
@@ -90,21 +93,30 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return [statuses count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier/* forIndexPath:indexPath*/];
     
     // Configure the cell...
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:CellIdentifier];
+        cell.textLabel.font = [UIFont systemFontOfSize:11.0];
+    }
+    
+    NSDictionary *status = [statuses objectAtIndex:indexPath.row];
+    NSString *text =[status objectForKey:@"text"];
+    cell.textLabel.text = text;
     
     return cell;
 }

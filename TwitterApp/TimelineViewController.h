@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimelineViewController : UITableViewController
+@interface TimelineViewController : UITableViewController {
+    NSArray *statuses;
+}
+
 - (IBAction)pressComposeButton:(id)sender;
 
 @end
